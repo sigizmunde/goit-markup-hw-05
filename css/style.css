@@ -239,6 +239,14 @@ header {
     color var(--transition-params);
 }
 
+.order-btn:hover,
+.order-btn:focus {
+  color: var(--accent-color);
+  background-color: var(--inverted-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 /* section */
 .section {
   padding-top: 94px;
@@ -520,6 +528,65 @@ header {
   color: var(--inverted-text-color);
 }
 
+/* MODAL */
+
+.is-hidden {
+  visibility: visible;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(150%);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 250ms linear, transform 250ms ease-in-out;
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--secondary-text-color);
+  background-color: var(--main-bg-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.modal-close-icon {
+  fill: currentColor;
+  width: 18px;
+  height: 18px;
+}
+
 /* --- PORTFOLIO --- */
 
 .filter-buttons {
@@ -529,7 +596,6 @@ header {
 }
 
 .filter-buttons .item:not(:nth-last-child(1)) {
-  display: inline-block;
   margin-right: 8px;
 }
 

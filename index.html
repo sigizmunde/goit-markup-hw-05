@@ -57,7 +57,9 @@
           <h1 class="main-header">
             Эффективные решения<br />для вашего бизнеса
           </h1>
-          <button type="button" class="order-btn">Заказать услугу</button>
+          <button type="button" class="order-btn" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <section class="benefits section">
@@ -447,6 +449,18 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-icon">
+            <use
+              href="./images/icons.svg#icon-close-symbol"
+              aria-label="логотип 1"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
